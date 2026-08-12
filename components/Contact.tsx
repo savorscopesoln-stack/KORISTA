@@ -76,7 +76,7 @@ export default function Contact() {
                     <a href={business.contact.phoneHref} className="text-text-onDark hover:text-press">
                       {business.contact.phoneDisplay}
                     </a>{" "}
-                    <span className="text-xs text-text-onDarkMuted">(placeholder)</span>
+                    <span className="text-xs text-text-onDarkMuted"></span>
                   </dd>
                 </div>
               </div>
@@ -88,7 +88,7 @@ export default function Contact() {
                     <a href={`mailto:${business.contact.email}`} className="text-text-onDark hover:text-press">
                       {business.contact.email}
                     </a>{" "}
-                    <span className="text-xs text-text-onDarkMuted">(placeholder)</span>
+                    <span className="text-xs text-text-onDarkMuted"></span>
                   </dd>
                 </div>
               </div>
@@ -102,7 +102,7 @@ export default function Contact() {
                         {h.days}: {h.time}
                       </span>
                     ))}
-                    <span className="text-xs text-text-onDarkMuted">(placeholder)</span>
+                    <span className="text-xs text-text-onDarkMuted"></span>
                   </dd>
                 </div>
               </div>
@@ -129,7 +129,7 @@ export default function Contact() {
                 <rect width="100%" height="100%" fill="url(#grid)" />
               </svg>
               <span className="relative font-mono text-xs text-text-onDarkMuted">
-                Map placeholder — {business.location.address}
+                Map updating soon — {business.location.address}
               </span>
             </div>
           </div>
