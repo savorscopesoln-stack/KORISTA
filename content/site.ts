@@ -19,18 +19,18 @@ export const business = {
   },
   contact: {
     // PLACEHOLDER — REPLACE with the real business line
-    phoneDisplay: "+254 700 000 000",
-    phoneHref: "tel:+254700000000",
+    phoneDisplay: "+254 707 185 119",
+    phoneHref: "tel:+254707185119",
     // PLACEHOLDER — REPLACE with the real WhatsApp business number
-    whatsappHref: "https://wa.me/254700000000",
-    whatsappDisplay: "+254 700 000 000",
+    whatsappHref: "https://wa.me/254707185119",
+    whatsappDisplay: "+254 707 185 119",
     // PLACEHOLDER — REPLACE with the real business email
-    email: "info@koristaprintinghub.co.ke",
+    email: "dokiambe@gmail.com",
   },
   hours: [
     // PLACEHOLDER — REPLACE with confirmed opening hours
-    { days: "Monday – Saturday", time: "8:00 AM – 7:00 PM" },
-    { days: "Sunday", time: "Closed" },
+    { days: "Sunday – Friday", time: "8:00 AM – 7:00 PM" },
+    { days: "Sartuday", time: "Closed" },
   ],
 };
 
