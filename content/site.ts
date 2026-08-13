@@ -94,6 +94,30 @@ export const media = {
     "https://korista.afripixelprojects.com/assets/signage-bV-WCoBy.jpg",
 };
 
+// Real job photos from Korista's WhatsApp catalogue (Aug 2026), cropped down
+// from the raw viewer screenshots and stored in /public/catalog. Used to
+// fill out the service galleries and portfolio below alongside `media`
+// above. A couple of images that showed identifiable private individuals
+// (memorial banners, a personalised graduation banner) were deliberately
+// left out of the public site rather than published without consent —
+// only Korista's own branding, generic corporate jobs, and product shots
+// made the cut.
+export const catalogMedia = {
+  sunekaWestBanner: "/catalog/suneka-west-banner.jpg",
+  shopfrontBanners: "/catalog/shopfront-banners.jpg",
+  rollupBelmontHotel: "/catalog/rollup-belmont-hotel.jpg",
+  xstandKph: "/catalog/xstand-kph.jpg",
+  worktagsLanyards: "/catalog/worktags-lanyards.jpg",
+  penBranding: "/catalog/pen-branding.jpg",
+  diariesStack: "/catalog/diaries-stack.jpg",
+  notebookA4Cover: "/catalog/notebook-a4-cover.jpg",
+  notebookA5Director: "/catalog/notebook-a5-director.jpg",
+  receiptBooks: "/catalog/receipt-books.jpg",
+  funeralPrograms: "/catalog/funeral-programs.jpg",
+  tshirtScreenPrinting: "/catalog/tshirt-screen-printing.jpg",
+  printProduction: "/catalog/print-production.jpg",
+};
+
 export type ServiceItem = {
   name: string;
   // Sourced from the same WhatsApp/Google Business price list as
@@ -142,7 +166,14 @@ export const services: Service[] = [
       { name: "Calendar Printing", price: "KSh 60" },
       { name: "Work Tags", price: "From KSh 100" },
     ],
-    images: [media.printWorkspace],
+    images: [
+      media.printWorkspace,
+      catalogMedia.notebookA4Cover,
+      catalogMedia.diariesStack,
+      catalogMedia.receiptBooks,
+      catalogMedia.funeralPrograms,
+      catalogMedia.worktagsLanyards,
+    ],
     // Anchor for now — point at a dedicated /services/printing route once it exists.
     href: "#contact",
   },
@@ -160,7 +191,15 @@ export const services: Service[] = [
       { name: "Vehicle Branding" },
       { name: "Shop Branding" },
     ],
-    images: [media.signage, media.bannerPrinting],
+    images: [
+      media.signage,
+      media.bannerPrinting,
+      catalogMedia.xstandKph,
+      catalogMedia.rollupBelmontHotel,
+      catalogMedia.sunekaWestBanner,
+      catalogMedia.shopfrontBanners,
+      catalogMedia.printProduction,
+    ],
     href: "#contact",
   },
   {
@@ -176,7 +215,7 @@ export const services: Service[] = [
       { name: "Pen Branding", price: "KSh 40" },
       { name: "Screen Printing", price: "From KSh 50" },
     ],
-    images: [media.merchandise],
+    images: [media.merchandise, catalogMedia.tshirtScreenPrinting, catalogMedia.penBranding],
     href: "#contact",
   },
   {
@@ -234,8 +273,8 @@ export const process = [
 ];
 
 export const portfolio = [
-  { title: "Corporate Banners", category: "Large Format", image: media.bannerPrinting },
-  { title: "Shop Branding", category: "Signage", image: media.signage },
-  { title: "Promotional Merchandise", category: "Branded Gifts", image: media.merchandise },
-  { title: "Print Production", category: "Digital Print", image: media.printWorkspace },
+  { title: "Corporate Banners", category: "Large Format", image: catalogMedia.sunekaWestBanner },
+  { title: "Shop Branding", category: "Signage", image: catalogMedia.shopfrontBanners },
+  { title: "Promotional Merchandise", category: "Branded Gifts", image: catalogMedia.tshirtScreenPrinting },
+  { title: "Print Production", category: "Digital Print", image: catalogMedia.printProduction },
 ];
