@@ -96,8 +96,11 @@ export default function CatalogGrid() {
                     <p className="mt-1.5 font-body text-sm text-text-muted">{item.description}</p>
                   )}
                   <div className="mt-auto flex items-center justify-between gap-3 pt-4">
-                    <span className="font-mono text-sm text-text-ink">
+                    <span className="flex items-baseline gap-2 font-mono text-sm text-text-ink">
                       {item.price ?? "Price on request"}
+                      {item.originalPrice && (
+                        <span className="text-xs text-text-muted line-through">{item.originalPrice}</span>
+                      )}
                     </span>
                     <a
                       href={`${business.contact.whatsappHref}?text=${waText}`}
