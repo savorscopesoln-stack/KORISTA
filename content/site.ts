@@ -18,19 +18,23 @@ export const business = {
     address: "Suneka, Kisii County, Kenya",
   },
   contact: {
-    // PLACEHOLDER — REPLACE with the real business line
-    phoneDisplay: "+254 707 185 119",
-    phoneHref: "tel:+254707185119",
-    // PLACEHOLDER — REPLACE with the real WhatsApp business number
-    whatsappHref: "https://wa.me/254707185119",
-    whatsappDisplay: "+254 707 185 119",
-    // PLACEHOLDER — REPLACE with the real business email
-    email: "dokiambe@gmail.com",
+    phoneDisplay: "0113 994 040",
+    phoneHref: "tel:+254113994040",
+    whatsappHref: "https://wa.me/254113994040",
+    whatsappDisplay: "0113 994 040",
+    // NEEDS CONFIRMATION — "kph.ldtpress@gmail.co" is missing the "m" in
+    // ".com" unless that's deliberate. Using exactly as given for now;
+    // please confirm the exact spelling before this goes live.
+    email: "kph.ldtpress@gmail.co",
+  },
+  payment: {
+    // M-Pesa Buy Goods and Services till number
+    mpesaTill: "4511834",
   },
   hours: [
     // PLACEHOLDER — REPLACE with confirmed opening hours
-    { days: "Sunday – Friday", time: "8:00 AM – 7:00 PM" },
-    { days: "Sartuday", time: "Closed" },
+    { days: "Monday – Saturday", time: "8:00 AM – 7:00 PM" },
+    { days: "Sunday", time: "Closed" },
   ],
 };
 

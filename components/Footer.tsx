@@ -1,12 +1,14 @@
+import Link from "next/link";
 import { business } from "@/content/site";
 import RegistrationMark from "./RegistrationMark";
 
 const quickLinks = [
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Work", href: "#work" },
-  { label: "Process", href: "#process" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "Services", href: "/#services" },
+  { label: "Catalog", href: "/catalog" },
+  { label: "Work", href: "/#work" },
+  { label: "Process", href: "/#process" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Footer() {
@@ -36,9 +38,9 @@ export default function Footer() {
             <ul className="space-y-2 font-body text-sm">
               {quickLinks.map((l) => (
                 <li key={l.href}>
-                  <a href={l.href} className="hover:text-text-onDark">
+                  <Link href={l.href} className="hover:text-text-onDark">
                     {l.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -47,10 +49,11 @@ export default function Footer() {
           <div>
             <p className="eyebrow mb-4 text-text-onDark">Services</p>
             <ul className="space-y-2 font-body text-sm">
-              <li><a href="#services" className="hover:text-text-onDark">Printing Services</a></li>
-              <li><a href="#services" className="hover:text-text-onDark">Branding &amp; Signage</a></li>
-              <li><a href="#services" className="hover:text-text-onDark">Promotional Products</a></li>
-              <li><a href="#services" className="hover:text-text-onDark">Cyber Services</a></li>
+              <li><Link href="/#services" className="hover:text-text-onDark">Printing Services</Link></li>
+              <li><Link href="/#services" className="hover:text-text-onDark">Branding &amp; Signage</Link></li>
+              <li><Link href="/#services" className="hover:text-text-onDark">Promotional Products</Link></li>
+              <li><Link href="/#services" className="hover:text-text-onDark">Cyber Services</Link></li>
+              <li><Link href="/catalog" className="hover:text-text-onDark">Full Catalog &amp; Pricing</Link></li>
             </ul>
           </div>
 
@@ -60,6 +63,7 @@ export default function Footer() {
               <li>{business.location.address}</li>
               <li>{business.contact.phoneDisplay}</li>
               <li>{business.contact.email}</li>
+              <li>M-Pesa Till: {business.payment.mpesaTill}</li>
             </ul>
           </div>
         </div>
