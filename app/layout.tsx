@@ -32,9 +32,9 @@ const mono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Korista Printing Hub | Printing & Branding in Kisii",
+  title: "Korista Printing Hub | Printing & Branding in Kisii & Homabay",
   description:
-    "Korista Printing Hub offers digital printing, banners, signage, promotional merchandise and cyber services in Suneka, Kisii County, Kenya.",
+    "Korista Printing Hub offers digital printing, banners, signage, promotional merchandise and cyber services from Suneka, Kisii County, and Sophia, Homabay County, Kenya.",
 };
 
 export default function RootLayout({

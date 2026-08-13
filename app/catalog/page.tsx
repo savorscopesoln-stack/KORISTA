@@ -8,7 +8,7 @@ import { business } from "@/content/site";
 export const metadata: Metadata = {
   title: "Catalog | Korista Printing Hub",
   description:
-    "Browse printing, branding, promotional products and cyber service items from Korista Printing Hub, Suneka, Kisii County.",
+    "Browse printing, branding, promotional products and cyber service items from Korista Printing Hub, Suneka (Kisii County) and Sophia, Homabay (Homabay County).",
 };
 
 export default function CatalogPage() {

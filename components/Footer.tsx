@@ -1,11 +1,12 @@
 import Link from "next/link";
-import { business } from "@/content/site";
+import { business, locations } from "@/content/site";
 import RegistrationMark from "./RegistrationMark";
 
 const quickLinks = [
   { label: "About", href: "/#about" },
   { label: "Services", href: "/#services" },
   { label: "Catalog", href: "/catalog" },
+  { label: "College", href: "/#college" },
   { label: "Work", href: "/#work" },
   { label: "Process", href: "/#process" },
   { label: "Contact", href: "/#contact" },
@@ -28,8 +29,8 @@ export default function Footer() {
               </p>
             </div>
             <p className="mt-4 font-body text-sm leading-relaxed">
-              Printing, branding and cyber services in {business.location.town},{" "}
-              {business.location.county}.
+              Printing, branding and cyber services in Suneka (Kisii
+              County) and Sophia, Homabay (Homabay County).
             </p>
           </div>
 
@@ -60,7 +61,9 @@ export default function Footer() {
           <div>
             <p className="eyebrow mb-4 text-text-onDark">Contact</p>
             <ul className="space-y-2 font-body text-sm">
-              <li>{business.location.address}</li>
+              {locations.map((l) => (
+                <li key={l.label}>{l.address}</li>
+              ))}
               <li>{business.contact.phoneDisplay}</li>
               <li>{business.contact.email}</li>
               <li>M-Pesa Till: {business.payment.mpesaTill}</li>

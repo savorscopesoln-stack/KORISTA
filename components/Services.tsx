@@ -171,8 +171,11 @@ export default function Services() {
                         />
                         <span className="font-body text-sm text-text-ink">{item.name}</span>
                       </label>
-                      <span className="whitespace-nowrap font-mono text-xs text-text-muted">
+                      <span className="flex items-baseline gap-2 whitespace-nowrap font-mono text-xs text-text-muted">
                         {item.price ?? "Price on request"}
+                        {item.wasPrice && (
+                          <span className="text-[11px] text-text-muted/70 line-through">{item.wasPrice}</span>
+                        )}
                       </span>
                     </li>
                   );

@@ -3,7 +3,7 @@
 import { useState, FormEvent, MouseEvent } from "react";
 import { MapPin, Phone, Mail, Clock, Send, Smartphone } from "lucide-react";
 import Button from "./Button";
-import { business } from "@/content/site";
+import { business, locations } from "@/content/site";
 import { useQuote } from "./QuoteProvider";
 
 const services = [
@@ -92,10 +92,13 @@ export default function Contact() {
               <div className="flex gap-3.5">
                 <MapPin className="mt-0.5 h-[18px] w-[18px] flex-shrink-0 text-press" strokeWidth={1.75} aria-hidden="true" />
                 <div>
-                  <dt className="sr-only">Address</dt>
+                  <dt className="sr-only">Locations</dt>
                   <dd className="text-text-onDark">
-                    {business.location.address}{" "}
-                    <span className="text-xs text-text-onDarkMuted">(placeholder)</span>
+                    {locations.map((l) => (
+                      <span key={l.label} className="block">
+                        {l.label}: {l.address}
+                      </span>
+                    ))}
                   </dd>
                 </div>
               </div>
@@ -117,8 +120,7 @@ export default function Contact() {
                   <dd>
                     <a href={`mailto:${business.contact.email}`} className="text-text-onDark hover:text-press">
                       {business.contact.email}
-                    </a>{" "}
-                    <span className="text-xs text-text-onDarkMuted">(please confirm spelling)</span>
+                    </a>
                   </dd>
                 </div>
               </div>
@@ -157,7 +159,7 @@ export default function Contact() {
             <div
               className="relative mt-8 flex h-48 w-full items-center justify-center overflow-hidden rounded-md border border-border-onDark bg-ink-700"
               role="img"
-              aria-label={`Map placeholder for ${business.location.address}`}
+              aria-label={`Map placeholder for ${locations.map((l) => l.address).join(" and ")}`}
             >
               <svg className="absolute inset-0 h-full w-full opacity-20" aria-hidden="true">
                 <defs>
@@ -168,7 +170,7 @@ export default function Contact() {
                 <rect width="100%" height="100%" fill="url(#grid)" />
               </svg>
               <span className="relative font-mono text-xs text-text-onDarkMuted">
-                Map placeholder — {business.location.address}
+                Map placeholder — {locations.map((l) => l.label).join(" · ")}
               </span>
             </div>
           </div>

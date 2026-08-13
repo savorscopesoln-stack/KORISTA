@@ -35,8 +35,9 @@ export default function AboutTeaser() {
           <p className="mt-6 max-w-lg font-body text-base leading-relaxed text-text-muted">
             {business.name} delivers printing, promotional branding,
             customized merchandise and cyber services for individuals,
-            businesses, schools, institutions and organizations in{" "}
-            {business.location.county}.
+            businesses, schools, institutions and organizations from our
+            two branches in Suneka, Kisii County, and Sophia, Homabay
+            County.
           </p>
           <ul className="mt-7 grid grid-cols-1 gap-3.5 sm:grid-cols-2">
             {capabilities.map((item) => (

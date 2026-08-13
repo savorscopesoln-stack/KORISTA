@@ -3,7 +3,7 @@ import Button from "./Button";
 import RegistrationMark from "./RegistrationMark";
 import StampBadge from "./StampBadge";
 import Marquee from "./Marquee";
-import { business, media, clientTypes } from "@/content/site";
+import { business, media, clientTypes, locations } from "@/content/site";
 
 export default function Hero() {
   return (
@@ -13,7 +13,7 @@ export default function Hero() {
         <div className="relative md:col-span-7 md:pr-6">
           <RegistrationMark className="absolute -left-1 -top-8 hidden h-6 w-6 md:block" color="#AEB4C4" />
           <p className="eyebrow mb-5 text-press">
-            {business.location.town} · {business.location.county}
+            {locations.map((l) => l.town).join(" · ")}
           </p>
           <h1 className="font-display text-[2.75rem] font-black uppercase leading-[0.92] tracking-tight text-text-onDark sm:text-6xl lg:text-[5.2rem]">
             Ideas,
@@ -29,7 +29,8 @@ export default function Hero() {
           <p className="mt-5 max-w-md font-body text-base leading-relaxed text-text-onDarkMuted">
             {business.name} delivers printing, branding, signage,
             promotional merchandise and cyber services for businesses,
-            schools and organizations across {business.location.county}.
+            schools and organizations from our Suneka and Sophia, Homabay
+            branches.
           </p>
           <div className="mt-9 flex flex-wrap gap-4">
             <Button href="#contact" variant="primary">

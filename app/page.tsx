@@ -4,6 +4,7 @@ import TrustStrip from "@/components/TrustStrip";
 import AboutTeaser from "@/components/AboutTeaser";
 import Services from "@/components/Services";
 import WhyChoose from "@/components/WhyChoose";
+import CollegeTeaser from "@/components/CollegeTeaser";
 import Portfolio from "@/components/Portfolio";
 import Process from "@/components/Process";
 import CtaBanner from "@/components/CtaBanner";
@@ -21,6 +22,7 @@ export default function Home() {
         <AboutTeaser />
         <Services />
         <WhyChoose />
+        <CollegeTeaser />
         <Portfolio />
         <Process />
         <CtaBanner />
